@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script src="js/clientPage.js"></script>
+        <script>
+            const client = new PaymentFormClient({
+                wrapperId: "formWrapper",
+            });
+        </script>
+        <style>
+            iframe {
+                width: 80%;
+                margin: 20px 10%;
+                border: 10px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Client e-shop</h1>
+
+        <p>This demo shows how customer page, iframe, and internet bank page can communicate between themselves using window.postMessage.</p>
+
+        <button id="renderForm" onclick="client.renderIframe()">
+            Pay 1 EUR
+        </button>
+
+        <div id="formWrapper"></div>
+
+        </body>
+</html>

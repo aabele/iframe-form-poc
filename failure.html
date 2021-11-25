@@ -1,0 +1,12 @@
+<html>
+<head>
+    <script>
+        window.opener.postMessage('CLOSE_INTERNET_BANK_FAILURE', '*');
+        const parentWindow = window.self;
+        parentWindow.opener = window.self;
+        parentWindow.close();
+    </script>
+</head>
+<body>
+</body>
+</html>

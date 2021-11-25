@@ -1,0 +1,38 @@
+<html>
+<head>
+    <script>
+        function render(text) {
+            document.getElementById('counter').innerHTML = String(text);
+        }
+
+        let secondsLeft = 5;
+
+        const interval = setInterval(function() {
+            --secondsLeft;
+            render(secondsLeft);
+            if (secondsLeft <= 0) {
+                clearInterval(interval);
+                successFlow();
+            }
+        }, 1000);
+
+        const successFlow = () => {
+            window.location.href = './success.html';
+        }
+
+        const failureFlow = () => {
+            window.location.href = './failure.html';
+        }
+
+    </script>
+</head>
+<body>
+<h1>Welcome to  internet bank</h1>
+<p>If no choice - You will be redirected successfully back in <span id="counter">5</span> seconds.</p>
+<p>
+    <button onclick="successFlow()">Success flow</button>
+    <button onclick="failureFlow()">Failure flow</button>
+</p>
+
+</body>
+</html>
