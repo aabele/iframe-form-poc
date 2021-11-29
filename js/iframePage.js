@@ -7,7 +7,6 @@ class PaymentForm {
     }
 
     msg(message) {
-        console.log("X1");
         window.parent.postMessage(message, '*');
     }
 
