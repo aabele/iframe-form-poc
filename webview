@@ -1,0 +1,5 @@
+<html>
+<body>
+<button onClick="window.open("https://www.mozilla.org/", "mozillaWindow", "popup");">Click</button>
+</body>
+</html>
